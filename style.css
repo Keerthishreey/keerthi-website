@@ -1,0 +1,205 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+header {
+    background: #FF9AA2;
+    padding: 15px;
+    transition: background 0.3s;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: rgb(228, 218, 218);
+    font-weight: bold;
+}
+
+.full-page {
+    padding: 50px 20px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about-box {
+    background: #FFDDC1;
+    padding: 15px;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.about-box:hover {
+    transform: scale(1.05);
+    background: #FFB6A0;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #222;
+    color: #fff;
+}
+
+.dark-mode header {
+    background: #444;
+}
+
+.dark-mode .about-box {
+    background: #555;
+}
+
+.dark-mode .about-box:hover {
+    background: #777;
+}
+
+.dark-mode .skill-card {
+    background: #666;
+}
+
+.dark-mode .back {
+    background: #444;
+}.color-palette {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.color-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #000; /* Optional: Add a border for better visibility */
+}
+
+
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #916ce9;
+    border-radius: 10px;
+    cursor: pointer;
+    perspective: 1000px;
+    transition: transform 0.3s;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.skill-card:hover {
+    transform: scale(1.1);
+}
+
+.skill-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background: #D4A5A5;
+}
+
+/* Form Styling */
+#contactForm input, #contactForm textarea {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #FF9AA2;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #FF6F61;
+    transform: scale(1.1);
+}
+
+/* Contact Icons */
+.contact-logos {
+    margin-top: 20px;
+}
+
+.contact-logos img {
+    width: 50px;
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-logos img:hover {
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 0 15px rgba(255, 154, 162, 0.8);
+}
+
+/* Dark Mode Toggle Button */
+#darkModeToggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background: #222;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#darkModeToggle:hover {
+    background: #444;
+}
+
+/* Home Text Animation */
+#home h2 {
+    text-shadow: 0 0 10px rgba(255, 154, 162, 0.8), 0 0 20px rgba(255, 183, 178, 0.6);
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
